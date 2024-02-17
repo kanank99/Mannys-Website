@@ -1,10 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import lowResLogo from "../assets/lowResLogo.png";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [openString, setSetOpenString] = useState("Open until 10:00 PM");
+  const headerRef = useRef(null);
 
   // function that returns string based on if the current user time is within the range of the restaurant's opening hours
   const openOrClosed = () => {
@@ -58,11 +59,29 @@ function Header() {
 
   useEffect(() => {
     setSetOpenString(openOrClosed());
+    if (headerRef.current) {
+      headerRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }, []);
 
   return (
     <>
-      <div className="hidden md:flex justify-center items-center w-full min-h-[60px] bg-black text-white">
+      <div
+        id="banner"
+        tabindex="-1"
+        class="flex z-50 gap-8 justify-center items-center px-4 w-full min-h-9 bg-gradient-to-r from-purple-600 to-blue-400"
+      >
+        <p class="text-white">
+          <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+            NEW
+          </span>{" "}
+          Buy a large 2 toppings pizza or more and get 10 jumbo wings for $5.99
+        </p>
+      </div>
+      <div
+        ref={headerRef}
+        className="hidden md:flex justify-center items-center w-full min-h-[60px] bg-black text-white select-none"
+      >
         <div className="w-full max-w-[1200px] flex justify-between px-8">
           <div className="flex items-center">
             <img
@@ -80,7 +99,7 @@ function Header() {
           </div>
           <div className="flex items-center">
             <div
-              className="flex items-center gap-3 select-none cursor-pointer relative"
+              className="flex items-center gap-3 cursor-pointer relative"
               onClick={() => setIsOpen(!isOpen)}
             >
               <p className="text-[14px] tracking-wide">{openString}</p>

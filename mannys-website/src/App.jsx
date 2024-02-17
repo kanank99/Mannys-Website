@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="">
       <Header />
+      <div className="h-[1000px]"></div>
     </div>
   );
 }
