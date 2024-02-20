@@ -52,7 +52,7 @@ function Menu() {
 
   return (
     <div className="w-full h-[60px] sticky top-0 border-t border-b border-gray-400 bg-white z-20">
-      <div className="w-[1200px] h-full mx-auto flex justify-between items-center px-4 relative overflow-hidden select-none">
+      <div className="max-w-[1200px] h-full mx-auto flex justify-between items-center px-4 relative overflow-hidden select-none">
         {showRightFade && (
           <div className="absolute left-0 top-0 w-full h-full menuNavFadeRight z-10 pointer-events-none"></div>
         )}
@@ -109,7 +109,7 @@ function Menu() {
                   selectedCategory === "Specials"
                     ? null
                     : "border-l border-[#aaa]"
-                } items-center text-nowrap bg-gradient-to-r from-[#004f71] to-[#085a83] bg-clip-text text-transparent cursor-pointer`}
+                } items-center text-nowrap bg-gradient-to-r from-[#004f71] to-[#085a83] bg-clip-text text-transparent cursor-pointer categoryUnderline relative`}
               >
                 {category}
               </p>
