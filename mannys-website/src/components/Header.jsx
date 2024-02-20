@@ -69,13 +69,15 @@ function Header() {
       <div
         id="banner"
         tabindex="-1"
-        class="flex z-50 gap-8 justify-center items-center px-4 w-full min-h-9 bg-gradient-to-r from-purple-600 to-blue-400"
+        class="flex z-50 gap-8 justify-center items-center px-4 w-full min-h-9 bg-[#8A0000] font-serif text-[14px] tracking-widest uppercase font-normal"
       >
         <p class="text-white">
-          <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+          <span class="text-sm font-bold me-2 px-2.5 py-0.5 rounded border border-white">
             NEW
           </span>{" "}
-          Buy a large 2 toppings pizza or more and get 10 jumbo wings for $5.99
+          Buy a large <span className="font-sans font-bold">2</span> toppings
+          pizza or more and get <span className="font-sans font-bold">10</span>{" "}
+          jumbo wings for <span className="font-sans font-bold">$5.99</span>
         </p>
       </div>
       <div
@@ -116,7 +118,7 @@ function Header() {
                 ></path>
               </svg>
               <div
-                className={`absolute top-[160%] right-0 w-[240px] h-[245px] bg-[white] text-black rounded border border-black shadow-lg ${
+                className={`z-50 absolute top-[160%] right-0 w-[240px] h-[245px] bg-[white] text-black rounded border border-black shadow-lg ${
                   isOpen ? "block" : "hidden"
                 }`}
               >

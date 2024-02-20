@@ -2,11 +2,13 @@ import "./App.css";
 import Header from "./components/Header";
 import MenuItem from "./components/MenuItem";
 import lasagna from "./assets/menu/lasagna.jpg";
+import Menu from "./components/Menu";
 
 function App() {
   return (
-    <div className="h-[1000px]">
+    <div className="h-[2000px]">
       <Header />
+      <Menu />
       <div className="flex justify-center items-center mt-[200px]">
         <MenuItem
           itemTitle="Homemade Lasagna"

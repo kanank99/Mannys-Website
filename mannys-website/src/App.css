@@ -4,3 +4,19 @@ body {
   box-sizing: border-box;
   background-color: #f7f7f7;
 }
+
+.menuNavFadeRight {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 85%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.menuNavFadeLeft {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 85%,
+    rgb(255, 255, 255) 100%
+  );
+}
