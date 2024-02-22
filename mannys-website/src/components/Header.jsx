@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import lowResLogo from "../assets/lowResLogo.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,7 +70,7 @@ function Header() {
       <div
         id="banner"
         tabindex="-1"
-        class="flex z-50 gap-8 justify-center items-center px-4 w-full min-h-9 bg-[#8A0000] font-serif text-[14px] tracking-widest uppercase font-normal"
+        class="flex z-50 gap-8 justify-center items-center px-4 w-full min-h-9 bg-gradient-to-tl from-[#004F71] to-[#138AB5] hover:brightness-90 font-serif text-[14px] tracking-widest uppercase font-normal transition-all duration-300"
       >
         <p class="text-white">
           <span class="text-sm font-bold me-2 px-2.5 py-0.5 rounded border border-white">
@@ -85,15 +86,15 @@ function Header() {
         className="hidden md:flex justify-center items-center w-full min-h-[60px] bg-black text-white select-none"
       >
         <div className="w-full max-w-[1200px] flex justify-between px-8">
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               src={lowResLogo}
               alt="Manny's Logo"
               className="h-[50px] mt-2"
             />
-          </div>
+          </Link>
           <div className="flex items-center gap-10 tracking-widest uppercase font-normal text-[14px]">
-            <a href="#">Menu</a>
+            <Link to="/menu">Menu</Link>
             {/* <a href="#">Join Our Family</a> */}
             <a href="#">Specials</a>
             <a href="#">Catering</a>
