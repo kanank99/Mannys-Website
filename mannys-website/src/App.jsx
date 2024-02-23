@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="h-[2000px]">
+    <div className="">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

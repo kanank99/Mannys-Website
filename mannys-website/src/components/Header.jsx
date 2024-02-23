@@ -73,7 +73,7 @@ function Header() {
         class="flex z-50 gap-8 justify-center items-center px-4 w-full min-h-9 bg-gradient-to-tl from-[#004F71] to-[#138AB5] hover:brightness-90 font-serif text-[14px] tracking-widest uppercase font-normal transition-all duration-300"
       >
         <p class="text-white">
-          <span class="text-sm font-bold me-2 px-2.5 py-0.5 rounded border border-white">
+          <span class="text-sm font-bold me-2 px-2.5 py-0.5 rounded border border-white font-sans">
             NEW
           </span>{" "}
           Buy a large <span className="font-sans font-bold">2</span> toppings
@@ -93,7 +93,7 @@ function Header() {
               className="h-[50px] mt-2"
             />
           </Link>
-          <div className="flex items-center gap-10 tracking-widest uppercase font-normal text-[14px]">
+          <div className="flex items-center gap-10 tracking-widest uppercase font-semibold text-[14px]">
             <Link to="/menu">Menu</Link>
             {/* <a href="#">Join Our Family</a> */}
             <a href="#">Specials</a>
@@ -105,7 +105,7 @@ function Header() {
               className="flex items-center gap-3 cursor-pointer relative"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <p className="text-[14px] tracking-wide">{openString}</p>
+              <p className="text-[16px] tracking-wide">{openString}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
