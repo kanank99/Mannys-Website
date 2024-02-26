@@ -21,6 +21,9 @@ import greekSalad from "../assets/menu/greekSalad.jpg";
 import antipastoSalad from "../assets/menu/antipastoSalad.jpg";
 import chefSalad from "../assets/menu/chefSalad.jpg";
 import chickenSalad from "../assets/menu/chickenSalad.jpg";
+import beefPita from "../assets/menu/beefPita.jpg";
+import Gyro from "../assets/menu/gyro.jpg";
+import spinachPie from "../assets/menu/spinachPie.jpg";
 
 function Menu() {
   //onClick slide menu to the left
@@ -197,6 +200,7 @@ function Menu() {
             {[
               "Specials",
               "Appetizers",
+              "Salads",
               "Greek Classics",
               "Pizza",
               "Calzones",
@@ -211,7 +215,8 @@ function Menu() {
               "Drinks",
             ].map((category) =>
               selectedCategory === category ? (
-                <p
+                <a
+                  href={`#${category}`}
                   className={`text-md md:text-lg font-semibold px-[20px] md:px-[40px] w-full h-[30px] flex ${
                     selectedCategory === "Specials"
                       ? null
@@ -219,16 +224,17 @@ function Menu() {
                   } items-center text-nowrap bg-gradient-to-r from-[#004f71] to-[#085a83] bg-clip-text text-transparent cursor-pointer categoryUnderline relative`}
                 >
                   {category}
-                </p>
+                </a>
               ) : (
-                <p
+                <a
+                  href={`#${category}`}
                   className={`text-md md:text-lg font-semibold px-[20px] md:px-[40px] ${
                     category === "Specials" ? null : "border-l border-[#aaa]"
                   }  w-full h-[30px] flex items-center text-nowrap cursor-pointer`}
                   onClick={() => setSelectedCategory(category)}
                 >
                   {category}
-                </p>
+                </a>
               )
             )}
           </div>
@@ -237,7 +243,9 @@ function Menu() {
 
         <div className="max-w-[1200px] mt-[50px] mx-auto">
           <div className="flex flex-col px-8 min-[1270px]:px-0">
-            <h1 className="text-black text-2xl font-semibold">Specials</h1>
+            <h1 id="Specials" className="text-black text-2xl font-semibold">
+              Specials
+            </h1>
             <p className="text-[#565462] text-lg font-serif ">
               Check out our daily specials
             </p>
@@ -354,7 +362,10 @@ function Menu() {
                 price="13.99"
               />
             </div>
-            <h1 className="text-black text-2xl font-semibold mt-10">
+            <h1
+              id="Appetizers"
+              className="text-black text-2xl font-semibold mt-10"
+            >
               Appetizers
             </h1>
             <p className="text-[#565462] text-lg font-serif mb-6">
@@ -518,7 +529,9 @@ function Menu() {
                 price="9.29"
               />
             </div>
-            <h1 className="text-black text-2xl font-semibold mt-10">Salads</h1>
+            <h1 id="Salads" className="text-black text-2xl font-semibold mt-10">
+              Salads
+            </h1>
             <p className="text-[#565462] text-lg font-serif mb-6">
               Fresh and delicious
             </p>
@@ -601,6 +614,78 @@ function Menu() {
                 backgroundImage={greekSalad}
                 description="Crispy iceberg lettuce, tomato, cucumbers, bell peppers, onions, greek pitted black olives, feta cheese & pepperoncini peppers. ADD Chicken: $5.29"
                 price="9.99"
+              />
+            </div>
+            <h1
+              id="Greek Classics"
+              className="text-black text-2xl font-semibold mt-10"
+            >
+              Greek Classics
+            </h1>
+            <p className="text-[#565462] text-lg font-serif mb-6">
+              Authentic Greek cuisine
+            </p>
+            <div className="hidden lg:block">
+              <div className="flex justify-between gap-3 mt-[20px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-xl"
+                  itemTitle="Marinated Beef on Pita"
+                  backgroundImage={beefPita}
+                  description="Beef, onions, tomatoes, lettuce, and tzatziki sauce. Served with fries."
+                  price="10.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Gyro"
+                  backgroundImage={Gyro}
+                  description="Lamb-beef, onions, tomatoes, lettuce, and tzatziki sauce."
+                  price="10.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Spinach Pie"
+                  backgroundImage={spinachPie}
+                  description="Filo dough stuffed with spinach and feta cheese served with pita bread and tzatziki sauce."
+                  price="14.99"
+                />
+              </div>
+            </div>
+
+            <div className="lg:hidden flex flex-col gap-4 mt-[20px]">
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-xl"
+                itemTitle="Marinated Beef on Pita"
+                backgroundImage={beefPita}
+                description="Beef, onions, tomatoes, lettuce, and tzatziki sauce. Served with fries."
+                price="10.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Gyro"
+                backgroundImage={Gyro}
+                description="Lamb-beef, onions, tomatoes, lettuce, and tzatziki sauce."
+                price="10.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Spinach Pie"
+                backgroundImage={spinachPie}
+                description="Filo dough stuffed with spinach and feta cheese served with pita bread and tzatziki sauce."
+                price="14.99"
               />
             </div>
           </div>

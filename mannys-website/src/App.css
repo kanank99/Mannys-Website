@@ -143,3 +143,7 @@ body {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #138ab5;
 }
+
+.grainy {
+  position: relative;
+}
