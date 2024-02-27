@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import arrow from "../assets/arrow.svg";
 import introImg from "../assets/menu/menuIntroImg.png";
 import MenuItem from "./MenuItem";
+import PizzaItem from "./PizzaItem";
 // import lasagna from "../assets/menu/lasagna.jpg";
 import Monday from "../assets/menu/MondayChickenOverRice.jpg";
 import Tuesday from "../assets/menu/TuesdayBakedZiti.jpg";
@@ -24,6 +25,7 @@ import chickenSalad from "../assets/menu/chickenSalad.jpg";
 import beefPita from "../assets/menu/beefPita.jpg";
 import Gyro from "../assets/menu/gyro.jpg";
 import spinachPie from "../assets/menu/spinachPie.jpg";
+import pizzaBg from "../assets/menu/pizzaBg.png";
 
 function Menu() {
   //onClick slide menu to the left
@@ -686,6 +688,278 @@ function Menu() {
                 backgroundImage={spinachPie}
                 description="Filo dough stuffed with spinach and feta cheese served with pita bread and tzatziki sauce."
                 price="14.99"
+              />
+            </div>
+            <h1
+              id="Greek Classics"
+              className="text-black text-2xl font-semibold mt-10"
+            >
+              Pizza
+            </h1>
+            <p className="text-[#565462] text-lg font-serif mb-6">
+              Our family recipe uses nothing but the finest ingredients…{" "}
+              <b>Say Cheese!!!</b>
+            </p>
+
+            <div className="relative w-full rounded h-[800px] border border-gray-400 shadow-lg bg-[#ddd56204] overflow-hidden pizzaBg bg-cover bg-center bg-no-repeat">
+              <div className="absolute top-0 left-0 w-full h-full bg-[#00000054] z-10"></div>
+              <div className="relative z-20 flex justify-center items-center h-full">
+                <div className="backdrop-blur-sm bg-white/10 rounded-lg flex flex-col gap-5 lg:gap-[40px] p-5 border border-gray-400">
+                  <div className="flex flex-col md:flex-row md:gap-8 lg:gap-[60px]">
+                    <div className="text-white">
+                      <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 text-[#ed0d01] word-stroke-1-pizza">
+                        PERSONAL PIZZA 7″
+                      </h2>
+                      <p className="lg:text-[1.2rem]">Cheese - $6.79</p>
+                      <p className="lg:text-[1.2rem]">
+                        Additional Toppings - $1.49
+                      </p>
+                      <p className="lg:text-[1.2rem]">Extra Cheese - $1.79</p>
+                    </div>
+                    <div className="text-white">
+                      <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 text-[#ed0d01] word-stroke-1-pizza">
+                        SMALL PIZZA 10″
+                      </h2>
+                      <p className="lg:text-[1.2rem]">Cheese - $10.49</p>
+                      <p className="lg:text-[1.2rem]">1 topping - $11.49</p>
+                      <p className="lg:text-[1.2rem]">2 toppings - $12.49</p>
+                      <p className="lg:text-[1.2rem]">3 toppings - $13.49</p>
+                      <p className="lg:text-[1.2rem]">4 toppings - $14.49</p>
+                      <p className="lg:text-[1.2rem]">
+                        Additional Toppings - $2.79
+                      </p>
+                      <p className="lg:text-[1.2rem]">Extra Cheese - $3.49</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col md:flex-row md:gap-8 lg:gap-[60px]">
+                    <div className="text-white">
+                      <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 text-[#ed0d01] word-stroke-1-pizza">
+                        MEDIUM PIZZA 13″
+                      </h2>
+                      <p className="lg:text-[1.2rem]">Cheese - $13.49</p>
+                      <p className="lg:text-[1.2rem]">1 topping - $14.49</p>
+                      <p className="lg:text-[1.2rem]">2 toppings - $15.49</p>
+                      <p className="lg:text-[1.2rem]">3 toppings - $16.49</p>
+                      <p className="lg:text-[1.2rem]">4 toppings - $17.49</p>
+                      <p className="lg:text-[1.2rem]">
+                        Additional Toppings - $3.49
+                      </p>
+                      <p className="lg:text-[1.2rem]">Extra Cheese - $4.49</p>
+                    </div>
+                    <div className="text-white">
+                      <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 text-[#ed0101] word-stroke-1-pizza">
+                        LARGE PIZZA 16″
+                      </h2>
+                      <p className="lg:text-[1.2rem]">Cheese - $16.99</p>
+                      <p className="lg:text-[1.2rem]">1 topping - $19.99</p>
+                      <p className="lg:text-[1.2rem]">2 toppings - $21.99</p>
+                      <p className="lg:text-[1.2rem]">3 toppings - $22.99</p>
+                      <p className="lg:text-[1.2rem]">4 toppings - $23.99</p>
+                      <p className="lg:text-[1.2rem]">
+                        Additional Toppings - $4.99
+                      </p>
+                      <p className="lg:text-[1.2rem]">Extra Cheese - $5.99</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="hidden lg:block">
+              <div className="flex justify-between gap-3 mt-[20px]">
+                <PizzaItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Hawaiian"
+                  description="Mushrooms, ham pineapple, mozzarella, and feta cheese."
+                  price7inch="11.49"
+                  price10inch="14.49"
+                  price13inch="20.49"
+                  price16inch="24.99"
+                />
+                <PizzaItem
+                  mobile={false}
+                  hasBadge={true}
+                  badge="CHEF SPECIAL"
+                  badgeColor="bg-[#000]"
+                  badgeTextColor="text-yellow-400"
+                  titleFontSize="text-2xl"
+                  itemTitle="House Special"
+                  description="Hamburger, pepperoni, italian sausage, mushrooms, black olives, onions, bell peppers, and mozzarella cheese."
+                  price7inch="11.49"
+                  price10inch="14.49"
+                  price13inch="20.49"
+                  price16inch="24.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <PizzaItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Greek"
+                  description="Gyro meat, sliced tomatoes, black olives, mozzarella, and feta cheese."
+                  price7inch="11.49"
+                  price10inch="14.49"
+                  price13inch="20.49"
+                  price16inch="24.99"
+                />
+                <PizzaItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Extra House Speical"
+                  description="Hamburger, pepperoni, italian sausage, ham, bacon, mushrooms, black olives, onions, bell peppers, and mozzarella cheese."
+                  price7inch="11.49"
+                  price10inch="14.49"
+                  price13inch="20.49"
+                  price16inch="24.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <PizzaItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Vegetarian"
+                  description="Onions, bell peppers, black olives, mushrooms, tomatoes, and mozzarella cheese."
+                  price7inch="11.49"
+                  price10inch="14.49"
+                  price13inch="20.49"
+                  price16inch="24.99"
+                />
+                <PizzaItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Meat Lovers"
+                  description="Hamburger, pepperoni, italian sausage, ham, bacon, canadian bacon, and mozzarella cheese."
+                  price7inch="11.49"
+                  price10inch="14.49"
+                  price13inch="20.49"
+                  price16inch="24.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <PizzaItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Philly Steak Pizza"
+                  description="Philly steak, onions, bell peppers, mushrooms, and mozzarella cheese."
+                  price7inch="11.49"
+                  price10inch="14.49"
+                  price13inch="20.49"
+                  price16inch="28.99"
+                />
+                <PizzaItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Philly Chicken Pizza"
+                  description="Grilled chicken, onions, bell peppers, mushrooms, and mozzarella cheese."
+                  price7inch="11.49"
+                  price10inch="14.49"
+                  price13inch="20.49"
+                  price16inch="28.99"
+                />
+              </div>
+            </div>
+
+            <div className="lg:hidden flex flex-col gap-4 mt-[20px]">
+              <PizzaItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Hawaiian"
+                description="Mushrooms, ham pineapple, mozzarella, and feta cheese."
+                price7inch="11.49"
+                price10inch="14.49"
+                price13inch="20.49"
+                price16inch="24.99"
+              />
+              <PizzaItem
+                mobile={true}
+                hasBadge={true}
+                badge="CHEF SPECIAL"
+                badgeColor="bg-[#000]"
+                badgeTextColor="text-yellow-400"
+                titleFontSize="text-2xl"
+                itemTitle="House Special"
+                description="Hamburger, pepperoni, italian sausage, mushrooms, black olives, onions, bell peppers, and mozzarella cheese."
+                mobileDescriptionFontSize="text-sm"
+                price7inch="11.49"
+                price10inch="14.49"
+                price13inch="20.49"
+                price16inch="24.99"
+              />
+              <PizzaItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Greek"
+                description="Gyro meat, sliced tomatoes, black olives, mozzarella, and feta cheese."
+                price7inch="11.49"
+                price10inch="14.49"
+                price13inch="20.49"
+                price16inch="24.99"
+              />
+              <PizzaItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Extra House Speical"
+                description="Hamburger, pepperoni, italian sausage, ham, bacon, mushrooms, black olives, onions, bell peppers, and mozzarella."
+                mobileDescriptionFontSize="text-sm"
+                price7inch="11.49"
+                price10inch="14.49"
+                price13inch="20.49"
+                price16inch="24.99"
+              />
+              <PizzaItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Vegetarian"
+                description="Onions, bell peppers, black olives, mushrooms, tomatoes, and mozzarella cheese."
+                price7inch="11.49"
+                price10inch="14.49"
+                price13inch="20.49"
+                price16inch="24.99"
+              />
+              <PizzaItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Meat Lovers"
+                description="Hamburger, pepperoni, italian sausage, ham, bacon, canadian bacon, and mozzarella cheese."
+                price7inch="11.49"
+                price10inch="14.49"
+                price13inch="20.49"
+                price16inch="24.99"
+              />
+              <PizzaItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Philly Steak Pizza"
+                description="Philly steak, onions, bell peppers, mushrooms, and mozzarella cheese."
+                price7inch="11.49"
+                price10inch="14.49"
+                price13inch="20.49"
+                price16inch="28.99"
+              />
+              <PizzaItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Philly Chicken Pizza"
+                description="Grilled chicken, onions, bell peppers, mushrooms, and mozzarella cheese."
+                price7inch="11.49"
+                price10inch="14.49"
+                price13inch="20.49"
+                price16inch="28.99"
               />
             </div>
           </div>
