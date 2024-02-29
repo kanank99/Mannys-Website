@@ -4,7 +4,6 @@ import arrow from "../assets/arrow.svg";
 import introImg from "../assets/menu/menuIntroImg.png";
 import MenuItem from "./MenuItem";
 import PizzaItem from "./PizzaItem";
-// import lasagna from "../assets/menu/lasagna.jpg";
 import Monday from "../assets/menu/MondayChickenOverRice.jpg";
 import Tuesday from "../assets/menu/TuesdayBakedZiti.jpg";
 import Wednesday from "../assets/menu/WednesdaySpaguetti.jpg";
@@ -25,7 +24,18 @@ import chickenSalad from "../assets/menu/chickenSalad.jpg";
 import beefPita from "../assets/menu/beefPita.jpg";
 import Gyro from "../assets/menu/gyro.jpg";
 import spinachPie from "../assets/menu/spinachPie.jpg";
-import pizzaBg from "../assets/menu/pizzaBg.png";
+import chickenCalzone from "../assets/menu/chickenCalzone.jpg";
+import vegetableSub from "../assets/menu/vegetableSub.jpg";
+import meatballSub from "../assets/menu/meatballSub.jpg";
+import chickenParmesanSub from "../assets/menu/chickenParmesanSub.jpg";
+import italianSub from "../assets/menu/italianSub.jpg";
+import phillySteakSub from "../assets/menu/phillySteakSub.jpg";
+import houseburgerSub from "../assets/menu/houseburgerSub.jpg";
+import countryPasta from "../assets/menu/countryPasta.jpg";
+import bakedEggplantParmesan from "../assets/menu/bakedEggplantParmesan.jpg";
+import lasagna from "../assets/menu/lasagna.jpg";
+import pastaPlate from "../assets/menu/pastaPlate.jpg";
+import greekSpaghetti from "../assets/menu/greekSpaghetti.jpg";
 
 function Menu() {
   //onClick slide menu to the left
@@ -261,7 +271,7 @@ function Menu() {
                   itemTitle="Chicken Over Rice"
                   backgroundImage={Monday}
                   description="Juicy chicken atop seasoned rice with a side of veggies. Simple, flavorful, and satisfying."
-                  price="13.99"
+                  price="15.99"
                 />
                 <MenuItem
                   mobile={false}
@@ -271,10 +281,12 @@ function Menu() {
                   itemTitle="Baked Ziti"
                   backgroundImage={Tuesday}
                   description="Pasta layered with meat sauce, ricotta, mozzarella, and Parmesan, baked until golden."
-                  price="13.99"
+                  price="11.99"
+                  subtext="**ADD mushrooms, sausage, or meatballs - $15.99**"
                 />
               </div>
               <div className="flex justify-between gap-3 mt-[40px]">
+                {/*WRONG PRICE*/}
                 <MenuItem
                   mobile={false}
                   hasBadge={true}
@@ -293,6 +305,7 @@ function Menu() {
                   itemTitle="Cheese Ravioli"
                   backgroundImage={Thursday}
                   description="Tender ravioli filled with a rich blend of cheeses, served in a smooth tomato sauce."
+                  subtext="**White Zinfandel is a great compliment with this dish**"
                   price="13.99"
                 />
               </div>
@@ -305,7 +318,7 @@ function Menu() {
                   itemTitle="Fried Flounder Plate"
                   backgroundImage={Friday}
                   description="Crispy, golden-brown flounder fillets served with a side of fries and coleslaw. A classic favorite."
-                  price="13.99"
+                  price="15.49"
                 />
               </div>
             </div>
@@ -690,10 +703,7 @@ function Menu() {
                 price="14.99"
               />
             </div>
-            <h1
-              id="Greek Classics"
-              className="text-black text-2xl font-semibold mt-10"
-            >
+            <h1 id="Pizza" className="text-black text-2xl font-semibold mt-10">
               Pizza
             </h1>
             <p className="text-[#565462] text-lg font-serif mb-6">
@@ -761,6 +771,52 @@ function Menu() {
                       <p className="lg:text-[1.2rem]">Extra Cheese - $5.99</p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* pizza toppings */}
+
+            <div className="relative z-20 mt-10 rounded-lg backdrop-blur-lg bg-white/20 p-5 border border-gray-400 shadow-xl">
+              <h2 className="text-3xl font-bold text-black mb-6 text-center">
+                Choose Your Favorite Toppings
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5 text-black text-xl transition-all duration-300 ease-in-out">
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#ff0000]/40">
+                  Pepperoni
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#faa307]/40">
+                  Bacon
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#f48c06]/40">
+                  Seasoned Ground Beef
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#e85d04]/40">
+                  Imported Ham
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#dc2f02]/40">
+                  Fontanini Sausage
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#d00000]/40">
+                  Sliced Black Olives
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#9d0208]/40">
+                  Tomatoes
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#6a040f]/40">
+                  Bell Peppers
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#370617]/40">
+                  Mushrooms
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#03071e]/40">
+                  Onions
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#8338ec]/40">
+                  Sweet Banana Peppers
+                </div>
+                <div className="flex items-center justify-center text-lg lg:text-xl topping-item hover:scale-105 transform transition duration-300 ease-out cursor-pointer shadow-lg p-2 rounded-lg bg-[#fb5607]/40">
+                  Jalapenos
                 </div>
               </div>
             </div>
@@ -960,6 +1016,304 @@ function Menu() {
                 price10inch="14.49"
                 price13inch="20.49"
                 price16inch="28.99"
+              />
+            </div>
+            <h1
+              id="Calzones"
+              className="text-black text-2xl font-semibold mt-10"
+            >
+              Calzones
+            </h1>
+            <p className="text-[#565462] text-lg font-serif mb-6">
+              Calzones are made with our homemade dough, stuffed with meat
+              sauce, a hint of seasoning, and a special blend of cheeses, and
+              baked in our oven topped with cheese. Specialty Calzones include
+              onions and bell peppers.
+            </p>
+            <div className="hidden lg:block">
+              <div className="flex justify-between gap-3 mt-[20px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Chicken Calzone"
+                  backgroundImage={chickenCalzone}
+                  description="Grilled chicken, onions, bell peppers, and mozzarella cheese."
+                  multiplePrices={true}
+                  price1="13.99"
+                  price2="18.99"
+                  price1Head="Small"
+                  price2Head="Large"
+                />
+              </div>
+            </div>
+
+            <div className="lg:hidden flex flex-col gap-4 mt-[20px]">
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Chicken Calzone"
+                backgroundImage={chickenCalzone}
+                description="Grilled chicken, onions, bell peppers, and mozzarella cheese."
+                multiplePrices={true}
+                price1="13.99"
+                price2="18.99"
+                price1Head="Small"
+                price2Head="Large"
+              />
+            </div>
+            <h1 id="Subs" className="text-black text-2xl font-semibold mt-10">
+              Hot Oven Subs
+            </h1>
+            <p className="text-[#565462] text-lg font-serif mb-6">
+              All Subs come in Small (8″). Served with french fries and a
+              pickle.
+            </p>
+            <div className="hidden lg:block">
+              <div className="flex justify-between gap-3 mt-[20px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Vegetable Sub"
+                  backgroundImage={vegetableSub}
+                  description="Black olives, mushrooms, lettuce, tomatoes, onions, bell peppers, cheese, oil and vinegar, and mayo."
+                  price="10.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Meatball Sub"
+                  backgroundImage={meatballSub}
+                  description="Meatball, meat sauce, and cheese. No veggies."
+                  price="10.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-xl"
+                  itemTitle="Chicken Parmesan Sub"
+                  backgroundImage={chickenParmesanSub}
+                  description="Fried chicken, meat sauce, and cheese."
+                  price="10.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Italian Sub"
+                  backgroundImage={italianSub}
+                  description="ham, cooked salami, bologna, genoa salami, cheese, lettuce, tomatoes, onions, bell peppers, mayo and oil and vinegar."
+                  price="10.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Philly Steak Sub"
+                  backgroundImage={phillySteakSub}
+                  description="Steak, cheese, and mayo. Famous in Philly. Add a dinner salad for $2.99."
+                  price="11.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Houseburger Sub"
+                  backgroundImage={houseburgerSub}
+                  description="Hamburger pattie, bacon, mushrooms, american cheese, lettuce, tomatoes, onions, bell peppers, mayo, and oil and vinegar."
+                  price="10.99"
+                />
+              </div>
+            </div>
+
+            <div className="lg:hidden flex flex-col gap-4 mt-[20px]">
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Vegetable Sub"
+                backgroundImage={vegetableSub}
+                description="Black olives, mushrooms, lettuce, tomatoes, onions, bell peppers, cheese, oil and vinegar, and mayo."
+                price="10.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Meatball Sub"
+                backgroundImage={meatballSub}
+                description="Meatball, meat sauce, and cheese. No veggies."
+                price="10.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-xl"
+                itemTitle="Chicken Parmesan Sub"
+                backgroundImage={chickenParmesanSub}
+                description="Fried chicken, meat sauce, and cheese."
+                price="10.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Italian Sub"
+                backgroundImage={italianSub}
+                description="ham, cooked salami, bologna, genoa salami, cheese, lettuce, tomatoes, onions, bell peppers, mayo and oil and vinegar."
+                price="10.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Philly Steak Sub"
+                backgroundImage={phillySteakSub}
+                description="Steak, cheese, and mayo. Famous in Philly. Add a dinner salad for $2.99."
+                price="11.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Houseburger Sub"
+                backgroundImage={houseburgerSub}
+                description="Hamburger pattie, bacon, mushrooms, american cheese, lettuce, tomatoes, onions, bell peppers, mayo, and oil and vinegar."
+                price="10.99"
+              />
+            </div>
+            <h1 id="Salads" className="text-black text-2xl font-semibold mt-10">
+              Manny's Classics
+            </h1>
+            <p className="text-[#565462] text-lg font-serif mb-6">
+              All classics are served with a dinner salad and garlic bread.
+            </p>
+            <div className="hidden lg:block">
+              <div className="flex justify-between gap-3 mt-[20px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Counrty Pasta"
+                  backgroundImage={countryPasta}
+                  description="Spaghetti, marinated chicken, onions, bell peppers, meat sauce, and mozzarella cheese."
+                  subtext="**White Zinfadel is a great compliment with this dish**"
+                  price="13.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Baked Eggplant Parmesan"
+                  backgroundImage={bakedEggplantParmesan}
+                  description="Breaded eggplant, marinara sauce, and mozzarella cheese."
+                  subtext="**White Zinfadel is a great compliment with this dish**"
+                  price="13.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Homemade Lasagna"
+                  backgroundImage={lasagna}
+                  description="Your choice of veggi or meat lasagna, towering layers of noodles, a ruch homemade meat/or marinara sauce, mozzarella, and parmesan cheese."
+                  subtext="**Pinot Grigio is a great compliment with this dish**"
+                  price="13.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Pasta Plate"
+                  backgroundImage={pastaPlate}
+                  description="Cannelloni, manicotti, stuffed shells, meat and cheese ravioli, meatballs, sausage, mozzarella cheese, and meat sauce."
+                  subtext="**White Zinfadel is a great compliment with this dish**"
+                  price="13.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Greek Spaghetti"
+                  backgroundImage={greekSpaghetti}
+                  description="Spaghetti noodles covered in feta cheese, olive oil, and spices."
+                  subtext="**Chardonnay is a great compliment with this dish**"
+                  price="12.99 / ADD Grilled Chicken - $16.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Pasta Plate"
+                  backgroundImage={pastaPlate}
+                  description="Cannelloni, manicotti, stuffed shells, meat and cheese ravioli, meatballs, sausage, mozzarella cheese, and meat sauce."
+                  subtext="**White Zinfadel is a great compliment with this dish**"
+                  price="13.99"
+                />
+              </div>
+            </div>
+
+            <div className="lg:hidden flex flex-col gap-4 mt-[20px]">
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Counrty Pasta"
+                backgroundImage={countryPasta}
+                description="Spaghetti, marinated chicken, onions, bell peppers, meat sauce, and mozzarella cheese."
+                subtext="**White Zinfadel is a great compliment with this dish**"
+                price="13.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Baked Eggplant Parmesan"
+                backgroundImage={bakedEggplantParmesan}
+                description="Breaded eggplant, marinara sauce, and mozzarella cheese."
+                subtext="**White Zinfadel is a great compliment with this dish**"
+                price="13.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Homemade Lasagna"
+                backgroundImage={lasagna}
+                description="Your choice of veggi or meat lasagna, towering layers of noodles, a ruch homemade meat/or marinara sauce, mozzarella, and parmesan cheese."
+                subtext="**Pinot Grigio is a great compliment with this dish**"
+                price="13.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Pasta Plate"
+                backgroundImage={pastaPlate}
+                description="Cannelloni, manicotti, stuffed shells, meat and cheese ravioli, meatballs, sausage, mozzarella cheese, and meat sauce."
+                subtext="**White Zinfadel is a great compliment with this dish**"
+                price="13.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Greek Spaghetti"
+                backgroundImage={greekSpaghetti}
+                description="Spaghetti noodles covered in feta cheese, olive oil, and spices."
+                subtext="**Chardonnay is a great compliment with this dish**"
+                price="12.99 / ADD Grilled Chicken - $16.99"
               />
             </div>
           </div>
