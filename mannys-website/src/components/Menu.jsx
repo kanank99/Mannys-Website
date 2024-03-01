@@ -36,6 +36,11 @@ import bakedEggplantParmesan from "../assets/menu/bakedEggplantParmesan.jpg";
 import lasagna from "../assets/menu/lasagna.jpg";
 import pastaPlate from "../assets/menu/pastaPlate.jpg";
 import greekSpaghetti from "../assets/menu/greekSpaghetti.jpg";
+import chickenFlorentine from "../assets/menu/chickenFlorentine.jpg";
+import georgiaSpaghetti from "../assets/menu/georgiaSpaghetti.jpg";
+import sicillianChicken from "../assets/menu/sicillianChicken.jpg";
+import cajunChickenPasta from "../assets/menu/cajunChickenPasta.png";
+import fettuccineCarbonara from "../assets/menu/fettuccineCarbonara.jpg";
 
 function Menu() {
   //onClick slide menu to the left
@@ -1095,7 +1100,7 @@ function Menu() {
                 <MenuItem
                   mobile={false}
                   hasBadge={false}
-                  titleFontSize="text-xl"
+                  titleFontSize="text-2xl"
                   itemTitle="Chicken Parmesan Sub"
                   backgroundImage={chickenParmesanSub}
                   description="Fried chicken, meat sauce, and cheese."
@@ -1155,7 +1160,7 @@ function Menu() {
               <MenuItem
                 mobile={true}
                 hasBadge={false}
-                titleFontSize="text-xl"
+                titleFontSize="text-2xl"
                 itemTitle="Chicken Parmesan Sub"
                 backgroundImage={chickenParmesanSub}
                 description="Fried chicken, meat sauce, and cheese."
@@ -1189,7 +1194,10 @@ function Menu() {
                 price="10.99"
               />
             </div>
-            <h1 id="Salads" className="text-black text-2xl font-semibold mt-10">
+            <h1
+              id="Classics"
+              className="text-black text-2xl font-semibold mt-10"
+            >
               Manny's Classics
             </h1>
             <p className="text-[#565462] text-lg font-serif mb-6">
@@ -1251,16 +1259,6 @@ function Menu() {
                   subtext="**Chardonnay is a great compliment with this dish**"
                   price="12.99 / ADD Grilled Chicken - $16.99"
                 />
-                <MenuItem
-                  mobile={false}
-                  hasBadge={false}
-                  titleFontSize="text-2xl"
-                  itemTitle="Pasta Plate"
-                  backgroundImage={pastaPlate}
-                  description="Cannelloni, manicotti, stuffed shells, meat and cheese ravioli, meatballs, sausage, mozzarella cheese, and meat sauce."
-                  subtext="**White Zinfadel is a great compliment with this dish**"
-                  price="13.99"
-                />
               </div>
             </div>
 
@@ -1314,6 +1312,113 @@ function Menu() {
                 description="Spaghetti noodles covered in feta cheese, olive oil, and spices."
                 subtext="**Chardonnay is a great compliment with this dish**"
                 price="12.99 / ADD Grilled Chicken - $16.99"
+              />
+            </div>
+            <h1 id="Salads" className="text-black text-2xl font-semibold mt-10">
+              Famous Dishes
+            </h1>
+            <p className="text-[#565462] text-lg font-serif mb-6">
+              All dishes are served with garlic bread and a salad.
+            </p>
+            <div className="hidden lg:block">
+              <div className="flex justify-between gap-3 mt-[20px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Chicken Florentine"
+                  backgroundImage={chickenFlorentine}
+                  description="With penne noodles mixed with alfredo sauce, spinach, and grilled chicken."
+                  price="14.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Georgia's Spaghetti"
+                  backgroundImage={georgiaSpaghetti}
+                  description="Spaghetti noodles with grilled chicken, olives, tomatoes, onions, feta cheese, cooked in olive oil, and spices."
+                  price="14.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Sicillian Chicken"
+                  backgroundImage={sicillianChicken}
+                  description="With penne noodles, alfredo sauce, and pesto sauce topped with blackened chicken."
+                  price="14.99"
+                />
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Cajun Chicken Pasta"
+                  backgroundImage={cajunChickenPasta}
+                  description="With penne noodles, alfredo sauce, cajun seasoning, mixed with grilled chicken, and mixed veggies."
+                  price="14.99"
+                />
+              </div>
+              <div className="flex justify-between gap-3 mt-[40px]">
+                <MenuItem
+                  mobile={false}
+                  hasBadge={false}
+                  titleFontSize="text-2xl"
+                  itemTitle="Fettuccine Carbonara"
+                  backgroundImage={fettuccineCarbonara}
+                  description="Fettuccine noodles with alfredo sauce mixed with ham, bacon, and mushrooms."
+                  price="14.99"
+                />
+              </div>
+            </div>
+
+            <div className="lg:hidden flex flex-col gap-4 mt-[20px]">
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Chicken Florentine"
+                backgroundImage={chickenFlorentine}
+                description="With penne noodles mixed with alfredo sauce, spinach, and grilled chicken."
+                price="14.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Georgia's Spaghetti"
+                backgroundImage={georgiaSpaghetti}
+                description="Spaghetti noodles with grilled chicken, olives, tomatoes, onions, feta cheese, cooked in olive oil, and spices."
+                price="14.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Sicillian Chicken"
+                backgroundImage={sicillianChicken}
+                description="With penne noodles, alfredo sauce, and pesto sauce topped with blackened chicken."
+                price="14.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Cajun Chicken Pasta"
+                backgroundImage={cajunChickenPasta}
+                description="With penne noodles, alfredo sauce, cajun seasoning, mixed with grilled chicken, and mixed veggies."
+                price="14.99"
+              />
+              <MenuItem
+                mobile={true}
+                hasBadge={false}
+                titleFontSize="text-2xl"
+                itemTitle="Fettuccine Carbonara"
+                backgroundImage={fettuccineCarbonara}
+                description="Fettuccine noodles with alfredo sauce mixed with ham, bacon, and mushrooms."
+                price="14.99"
               />
             </div>
           </div>
